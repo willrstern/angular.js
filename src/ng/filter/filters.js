@@ -485,8 +485,8 @@ function dateFilter($locale) {
  *
  */
 function jsonFilter() {
-  return function(object) {
-    return toJson(object, true);
+  return function(object, pretty) {
+    return toJson(object, (typeof pretty === 'undefined') ? true : pretty);
   };
 }
 
